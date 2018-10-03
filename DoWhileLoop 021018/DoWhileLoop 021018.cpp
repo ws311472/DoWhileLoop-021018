@@ -27,6 +27,7 @@ int main()
 	cout << "2. Subtract two numbers" << endl;
 	cin >> iChoice;
 
+	int total = 0;
 	do
 	{
 
@@ -35,7 +36,7 @@ int main()
 		{
 		case 1:
 		{cout << "The total of " << iNumber1 << " and " << iNumber2 << " is: " << iNumber1 + iNumber2 << endl;
-		break;}
+		break; }
 		case 2: {
 			if (iNumber1 > iNumber2) {
 				cout << "If you subtract " << iNumber2 << " from " << iNumber1 << " then you will get: " << iNumber1 - iNumber2;
@@ -49,7 +50,10 @@ int main()
 			cout << "Input not recognised :( " << endl;
 			break;
 		}
-	}
+		total += iNumber1;
+		if (total > 300)
+			break;
+	} while (true);
 
 	return 0;
 }
